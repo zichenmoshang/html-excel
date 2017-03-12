@@ -1,0 +1,123 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,body{
+	height: 100%;
+}
+.clearfix:before {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.container{
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	background: #fff;
+}
+table{
+	border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+    border-width: 0;
+    table-layout: fixed;
+    width: 0;
+    outline-width: 0;
+    max-width: none;
+    max-height: none;
+}
+th{
+	background: #eee;
+	border: 1px solid #ccc;
+	position: relative;
+}
+tbody th{
+	line-height: 0;
+	overflow: hidden;
+}
+td{
+	border: 1px solid #ccc;
+	cursor: cell;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+thead tr{
+	height: 30px;
+}
+.moveWidth,.moveHeight{
+	position: absolute;
+	background: inherit;
+	
+}
+.moveWidth{
+	height: 29px;
+	right: 0;
+	top:0;
+	width: 3px;
+	cursor: col-resize;
+}
+.moveHeight{
+	bottom:0;
+	left: 0;
+	width: 99px;
+	height: 3px;
+	cursor: row-resize;
+}
+.moveWidth:hover,.moveHeight:hover{
+	background: #666;
+}
+td.active{
+	background: #99C7F1;
+}
+.contextMenu{
+	position: absolute;
+	width: 100px;
+	font-size: 14px;
+	background: #fff;
+	z-index: 1;
+	line-height: 30px;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 3px #ccc;
+}
+.contextMenu li{
+	border-bottom: 1px solid #ccc;
+	list-style: none;
+	cursor: pointer;
+}
+.contextMenu button{
+	border: none;
+	background: transparent;
+	width: 100px;
+	height: 30px;
+	cursor: pointer;
+	outline: none;
+}
+.contextMenu button:disabled{
+	color: #999;
+}
+label{
+	-webkit-user-select: none;
+	margin: 0 10px;
+	line-height: 30px;
+}
+label span{
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #ccc;
+	background: #fff;
+	margin-left: 5px;
+}
+label span.active{
+	background: #A2E47A;
+}
